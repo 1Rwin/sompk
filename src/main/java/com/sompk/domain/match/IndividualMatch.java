@@ -1,13 +1,21 @@
 package com.sompk.domain.match;
 
-import java.sql.Timestamp;
+import com.sompk.domain.participants.Player;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-public class IndividualMatch {
-    int id;
-//    Zawodnik zaw1;
-//    Zawodnik zaw2;
-//    Map<TypSedzia, Sedzia> sedziowie;
-//    Map<Zawodnik, Punkty> wynik;
-//    Timestamp czas;
-//    User technik;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value = "IndividualMatch")
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class IndividualMatch extends Match {
+    private Player player1;
+    private Player player2;
 }

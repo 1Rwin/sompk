@@ -13,11 +13,10 @@ import javax.persistence.Id;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Tournament {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-//    List<Grupa> grupy;
-//    Drabinka drabinka;
-//    Map<MiejscePodium, Zawodnik> miejsca;
+    private String name;
+    private String surname;
 }
